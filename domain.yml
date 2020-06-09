@@ -1,0 +1,54 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - find_time_zone
+  - find_time_zone_for_location
+  - city_info
+  - thanks
+actions:
+  - action_show_time_zone
+  
+entities:
+  - city
+slots:
+  city:
+    type: text
+    auto_fill: True
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Domain User."
+
+  utter_ask_location:
+  - text: "Which City do you need time zone off?"
+
+  utter_finding_time_zone:
+  - text: "Ok, give me a second to look it up for time zone of city --> {city}"
+
+  utter_you_are_welcome:
+  - text: "You are Welcome!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
